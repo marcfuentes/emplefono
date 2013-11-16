@@ -8,7 +8,7 @@ class Company < ActiveRecord::Base
   	address
  end
 
- has_attached_file :photo, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/img/missing.png"
+ has_attached_file :photo, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/system/:attachment/:id/:style/:filename"
 
 end
 

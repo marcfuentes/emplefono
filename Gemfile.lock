@@ -124,10 +124,11 @@ GEM
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     orm_adapter (0.4.0)
-    paperclip (3.5.2)
+    paperclip (3.1.4)
       activemodel (>= 3.0.0)
+      activerecord (>= 3.0.0)
       activesupport (>= 3.0.0)
-      cocaine (~> 0.5.3)
+      cocaine (>= 0.0.2)
       mime-types
     pg (0.17.0)
     polyglot (0.3.3)
@@ -234,7 +235,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   mini_magick
-  paperclip (~> 3.0)
+  paperclip (~> 3.1.0)
   pg
   quiet_assets
   rails (= 3.2.13)
