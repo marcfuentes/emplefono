@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '1.9.3'
 gem 'rails', '3.2.13'
-gem 'sqlite3'
+
 
 
 group :assets do
@@ -23,14 +23,23 @@ gem 'simple_form'
 gem 'gmaps4rails'
 
 
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
   gem 'hub', :require=>nil
   gem 'quiet_assets'
   gem 'rails_layout'
+  gem "paperclip", "~> 3.0"
+  gem 'mini_magick'
+  gem 'sqlite3'
 end
 
+group :production do
+  gem 'pg'
+  gem 'thin'
+  gem 'rails_12factor'
+end
 
 group :development, :test do
   gem 'factory_girl_rails'

@@ -1,5 +1,5 @@
 class Company < ActiveRecord::Base
-  attr_accessible :address, :city, :commune, :contact_number, :description, :employee_count, :gmaps, :latitude, :longitude, :name, :phone, :photo, :website
+  attr_accessible :address, :city, :commune, :contact_number, :description, :employee_count, :gmaps, :latitude, :longitude, :name, :phone, :photo, :website, :photo_file_name
 
   acts_as_gmappable
 
@@ -8,7 +8,7 @@ class Company < ActiveRecord::Base
   	address
  end
 
-
+ has_attached_file :photo, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/img/missing.png"
 
 end
 

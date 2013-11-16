@@ -9,7 +9,7 @@ class CompaniesController < ApplicationController
     @json = Company.all.to_gmaps4rails  do |company, marker|
     marker.infowindow render_to_string(:partial => "/companies/gmaps4rails_infowindow", :locals => { :company => company})
     marker.picture({
-                  :picture => "/img/Clinica Tabancura.png",
+                  :picture => "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=A|FF0000|000000",
                   :width   => 30,
                   :height  => 30,
                  })

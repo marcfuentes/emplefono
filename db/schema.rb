@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131011225615) do
+ActiveRecord::Schema.define(:version => 20131115210430) do
 
   create_table "companies", :force => true do |t|
     t.string   "name"
@@ -27,8 +27,12 @@ ActiveRecord::Schema.define(:version => 20131011225615) do
     t.float    "latitude"
     t.float    "longitude"
     t.boolean  "gmaps"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   create_table "roles", :force => true do |t|
@@ -56,6 +60,11 @@ ActiveRecord::Schema.define(:version => 20131011225615) do
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
     t.string   "name"
+    t.string   "address"
+    t.string   "commune"
+    t.integer  "age"
+    t.integer  "phone"
+    t.date     "birth"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
