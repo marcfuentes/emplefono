@@ -30,7 +30,7 @@ group :development do
   gem 'hub', :require=>nil
   gem 'quiet_assets'
   gem 'rails_layout'
-  gem "paperclip", "~> 3.1.0"
+  gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
   gem 'mini_magick'
   gem 'sqlite3'
 end
